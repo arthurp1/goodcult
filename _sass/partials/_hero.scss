@@ -1,45 +1,106 @@
- .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://d33wubrfki0l68.cloudfront.net/b4de11d7efaee6a5430305a08c2555299f7cf16a/bdd44/assets/img/website_cover.jpg");
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    }
-    
-    .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    }
-    .hero-logo {
-    width: 200px;
-    margin: auto;
-    }
-    
-    .hero-text button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
-    text-align: center;
-    cursor: pointer;
-    }
-    
-    .hero-text button:hover {
-    background-color: #555;
-    color: white;
-    }
+$bronze: #130d0a;
+$white: #fff;
+$heroHeight: 840px;
 
-    svg {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 10vw;
-  /* set height to pixels if you want angle to change with screen width */
+body {
+	padding: 0;
+	margin: 0;
+	background-color: $white;
+	font-family: 'Playfair Display', serif;
+	color: $bronze;
+}
+
+#hero {
+	height: $heroHeight;
+	overflow: hidden;
+	position: relative;
+}
+#content {
+	background-color: $white;
+}
+.layer {
+	background-position: bottom center;
+	background-size: auto;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: $heroHeight;
+	position: fixed;
+	z-index: -1;
+}
+
+#hero-mobile {
+	display: none;
+	background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png") no-repeat center bottom / cover;
+	height: 320px;
+}
+
+.first-section {
+	padding: 50px 0 20px 0;
+}
+.text-header {
+	font-size: 50px;
+	text-align: center;
+}
+h1 {
+	line-height: 120%;
+	margin-bottom: 30px;
+}
+p {
+	color: #ede0d5;
+	font-size: 18px;
+	line-height: 150%;
+}
+
+#hero, .layer {
+	min-height: 840px;
+}
+
+.layer-bg {
+	background-image: url('https://goodcult.org/assets/hero.hyperesources/baselayer (1)_2x.png');
+			background-position: center center;
+}
+
+.layer-1 {
+	background-image: url('https://goodcult.org/assets/hero.hyperesources/l1-forest-min_2x.png');
+		background-position: top center;
+		}
+.layer-2 {
+	background-image: url('https://goodcult.org/assets/hero.hyperesources/logo.png');
+		background-position: center 183px;
+		}
+.layer-3 {
+	background-image: url('https://goodcult.org/assets/hero.hyperesources/people-min_2x.png');
+		background-position: bottom 90px center;
+		}
+.layer-4 {
+	background-image: url('https://goodcult.org/assets/hero.hyperesources/bushes (1)_2x.png');
+		background-position: bottom 90px center;
+		}
+.layer-5 {
+	background-image: url('https://goodcult.org/assets/hero.hyperesources/svg-divider.svg');
+	background-position: bottom -180px center;
+}
+.layer-overlay {
+	background-image: url('https://goodcult.org/assets/hero.hyperesources/logo_x.png');
+		}
+
+// Media Queries
+@media only screen and (max-width: 768px) {
+	#hero {
+		display: none;
+	}
+	#hero-mobile {
+		display: block;
+	}
+}
+
+
+// Additional
+.tutorial-link {
+	color: $white;
+	font-size: 18px;
+	text-decoration: underline;
+	&:hover {
+		color: #ede0d5;
+	}
 }

@@ -1,0 +1,109 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  font-family: 'Playfair Display', serif;
+  color: #130d0a;
+}
+
+#hero {
+  height: 840px;
+  overflow: hidden;
+  position: relative;
+}
+
+#content {
+  background-color: #fff;
+}
+
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 840px;
+  position: fixed;
+  z-index: -1;
+}
+
+#hero-mobile {
+  display: none;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/full_illustration.png") no-repeat center bottom/cover;
+  height: 320px;
+}
+
+.first-section {
+  padding: 50px 0 20px 0;
+}
+
+.text-header {
+  font-size: 50px;
+  text-align: center;
+}
+
+h1 {
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+p {
+  color: #ede0d5;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+#hero, .layer {
+  min-height: 840px;
+}
+
+.layer-bg {
+  background-image: url("https://goodcult.org/assets/hero.hyperesources/baselayer (1)_2x.png\a 		");
+  background-position: center center;
+}
+
+.layer-1 {
+  background-image: url("https://goodcult.org/assets/hero.hyperesources/l1-forest-min_2x.png");
+  background-position: top center;
+}
+
+.layer-2 {
+  background-image: url("https://goodcult.org/assets/hero.hyperesources/logo.png\a 		");
+  background-position: center 183px;
+}
+
+.layer-3 {
+  background-image: url("https://goodcult.org/assets/hero.hyperesources/people-min_2x.png\a 		");
+  background-position: bottom 90px center;
+}
+
+.layer-4 {
+  background-image: url("https://goodcult.org/assets/hero.hyperesources/bushes (1)_2x.png\a 		");
+  background-position: bottom 90px center;
+}
+
+.layer-5 {
+  background-image: url("https://goodcult.org/assets/hero.hyperesources/svg-divider.svg");
+  background-position: bottom -180px center;
+}
+
+.layer-overlay {
+  background-image: url("https://goodcult.org/assets/hero.hyperesources/logo_x.png\a 		");
+}
+
+@media only screen and (max-width: 768px) {
+  #hero {
+    display: none;
+  }
+
+  #hero-mobile {
+    display: block;
+  }
+}
+.tutorial-link {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.tutorial-link:hover {
+  color: #ede0d5;
+}
